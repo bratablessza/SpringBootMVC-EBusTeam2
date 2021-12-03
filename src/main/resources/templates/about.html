@@ -26,8 +26,8 @@
 			<header class="site-header">
 				<div class="container">
 					<a th:href="@{/home}" id="branding">
-						<img src="/images/logo.png" alt="Site Title">
-						<small class="site-description">Only Music</small>
+						<img src="/images/logo.png" alt="Site Title" width="50px">
+						<small class="site-description">E Bus</small>
 					</a> <!-- #branding -->
 					
 					<nav class="main-navigation">
@@ -49,10 +49,12 @@
 				<div class="fullwidth-block inner-content">
 					<div class="container">
 						<div class="row">
-							<div class="col-md-7">
-								<div class="content">
+							<div class="col-md-7" style=" border: 1px white solid; width: fit-content;">
+								<div class="content" >
 									<h2 class="entry-title">Our Developers</h2>
-									<div th:each="dev : ${dataDev}">
+									<div class="deveLoop" th:each="dev : ${dataDev}" 
+									style="float: left; width: 33%; padding-left: 10px;">
+										
 									<figure class="featured-image">
 										<img  th:src="'images/dev/'+${dev.id}+'.jpg'" alt="post image" >
 									</figure>
@@ -71,55 +73,7 @@
 								</div>
 							</div>
 							</div>
-							<div class="col-md-4 col-md-push-1">
-								<aside class="sidebar">
-									<div class="widget">
-										<h3 class="widget-title">Discography</h3>
-										<ul class="discography-list">
-											<li>
-												<figure class="cover"><img src="/images/thumbnail-1.jpg" alt="thumbnail 1"></figure>
-												<div class="detail">
-													<h3><a href="#">Deserunt mollitia animi</a></h3>
-													<span class="year">2004</span>
-													<span class="track">17 tracks</span>
-												</div>
-											</li>
-											<li>
-												<figure class="cover"><img src="/images/thumbnail-2.jpg" alt="thumbnail 2"></figure>
-												<div class="detail">
-													<h3><a href="#">Deserunt mollitia animi</a></h3>
-													<span class="year">2004</span>
-													<span class="track">17 tracks</span>
-												</div>
-											</li>
-											<li>
-												<figure class="cover"><img src="/images/thumbnail-3.jpg" alt="thumbnail 3"></figure>
-												<div class="detail">
-													<h3><a href="#">Deserunt mollitia animi</a></h3>
-													<span class="year">2004</span>
-													<span class="track">17 tracks</span>
-												</div>
-											</li>
-											<li>
-												<figure class="cover"><img src="/images/thumbnail-4.jpg" alt="thumbnail 4"></figure>
-												<div class="detail">
-													<h3><a href="#">Deserunt mollitia animi</a></h3>
-													<span class="year">2004</span>
-													<span class="track">17 tracks</span>
-												</div>
-											</li>
-											<li>
-												<figure class="cover"><img src="/images/thumbnail-5.jpg" alt="thumbnail 5"></figure>
-												<div class="detail">
-													<h3><a href="#">Deserunt mollitia animi</a></h3>
-													<span class="year">2004</span>
-													<span class="track">17 tracks</span>
-												</div>
-											</li>
-										</ul>
-									</div>
-								</aside>
-							</div>
+
 						</div>
 					</div>
 				</div> <!-- .testimonial-section -->
@@ -129,7 +83,7 @@
 
 			<footer class="site-footer">
 				<div class="container">
-					<img src="/images/logobus.png" alt="Site Name" style="width: 100px;">
+					<img src="/images/logo.png" alt="Site Name" style="width: 100px;">
 					
 					<address>
 						<p>Jl. BelahDuren, No 2, Jakarta Selatan<br><a href="tel:210000000">+62 21000 0000</a> <br> <a href="mailto:EbusTeamTwo5@gmail.com">EbusTeamTwo5@gmail.com</a></p> 

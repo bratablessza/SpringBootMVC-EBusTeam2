@@ -53,12 +53,12 @@
 									<h2 class="entry-title">Our Developers</h2>
 									<div th:each="dev : ${dataDev}">
 									<figure class="featured-image">
-										<img src="/images/858503-music-wallpapers.jpg" alt="post image">
+										<img th:src="'images/'+${dev.id}+'.jpg'" alt="post image" width="50px">
 									</figure>
 									<h3 th:text="*{dev.nama}"> </h3>
 									<div class="social-links-developers"> 
-										<a href="https:facebook.com/"><i class="fa fa-facebook-square"></i></a>
-										<a href="https:instagram.com/"><i class="fa fa-instagram"></i></a>
+										<a th:href="'https://www.facebook.com/'+${dev.usernameFb}+'/'"><i class="fa fa-facebook-square"></i></a>
+										<a th:href="'https://www.instagram.com/'+${dev.usernameIg}"><i class="fa fa-instagram"></i></a>
 									</div> <!-- .social- dev - links -->
 									<br>
 									<p class="leading">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat odio autem iste neque architecto alias culpa, ab libero, praesentium esse natus quae possimus sed qui dolorum laudantium illum, incidunt eligendi?</p>
@@ -128,7 +128,7 @@
 
 			<footer class="site-footer">
 				<div class="container">
-					<img src="/images/logo.png" alt="Site Name" style="width: 100px;">
+					<img src="/images/logobus.png" alt="Site Name" style="width: 100px;">
 					
 					<address>
 						<p>Jl. BelahDuren, No 2, Jakarta Selatan<br><a href="tel:210000000">+62 21000 0000</a> <br> <a href="mailto:EbusTeamTwo5@gmail.com">EbusTeamTwo5@gmail.com</a></p> 

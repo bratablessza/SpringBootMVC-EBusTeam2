@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Loading third party fonts -->
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900" rel="stylesheet"
+        type="text/css">
+    <link href="/fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <!-- Loading main css file -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+
+    <footer class="site-footer" th:fragment="footer">
+        <div class="container">
+            <img src="../../static/images/logo.png" alt="rusak" style="width: 100px;">
+
+            <address>
+                <p>Jl. BelahDuren, No 2, Jakarta Selatan<br><a href="tel:210000000">+62 21000 0000</a> <br> <a
+                        href="mailto:EbusTeamTwo5@gmail.com">EbusTeamTwo5@gmail.com</a></p>
+            </address>
+
+            <form action="#" class="newsletter-form">
+                <input type="email" placeholder="Enter your email to join newsletter...">
+                <input type="submit" class="button cut-corner" value="Subscribe">
+            </form> <!-- .newsletter-form -->
+
+            <div class="social-links">
+                <a href="#"><i class="fa fa-facebook-square"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-google-plus"></i></a>
+                <a href="#"><i class="fa fa-pinterest"></i></a>
+            </div> <!-- .social-links -->
+
+            <p class="copy">E-Bus @ Copyright 2021. All right reserved. Designed by <a
+                    href="http://srikrishnacommunication.com/Giridesigns.html">Team Two</a></p>
+        </div>
+    </footer> <!-- .site-footer -->
+
+
+
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>

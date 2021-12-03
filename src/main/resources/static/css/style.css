@@ -3584,4 +3584,11 @@ body {
   padding-left: 20px;
 }
 
+
+.featured-image img {
+  border: 10px orangered solid;
+  border-radius: 5px;
+
+}
+
 /*# sourceMappingURL=style.css.map */

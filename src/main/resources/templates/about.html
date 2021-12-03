@@ -1,3 +1,4 @@
+<!-- Status : 80% TInggal UI dan sizing foto -->
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -10,7 +11,7 @@
 		<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900" rel="stylesheet" type="text/css">
 		<link href="/fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
 		<!-- Loading main css file -->
-		<link rel="stylesheet" href="/css/style.css">
+		<link rel="stylesheet" href="css/style.css">
 		
 		<!--[if lt IE 9]>
 		<script src="js/ie-support/html5.js"></script>
@@ -24,19 +25,20 @@
 		<div id="site-content">
 			<header class="site-header">
 				<div class="container">
-					<a href="index.html" id="branding">
+					<a th:href="@{/}" id="branding">
 						<img style="height: 60px;" src="images/logo.png" alt="Site Title">
+						<small class="site-description">Only Music</small>
 					</a> <!-- #branding -->
 					
 					<nav class="main-navigation">
 						<button type="button" class="toggle-menu"><i class="fa fa-bars"></i></button>
 						<ul class="menu">
-							<li class="menu-item"><a href="index.html">Home</a></li>
-							<li class="menu-item current-menu-item"><a href="about.html">About</a></li>
-							<li class="menu-item"><a href="gallery.html">Gallery</a></li>
-							<li class="menu-item"><a href="download.html">Download</a></li>
-							<li class="menu-item"><a href="blog.html">Blog</a></li>
-							<li class="menu-item"><a href="contact.html">Contact</a></li>
+							<li class="menu-item"><a  th:href="@{/}">Home</a></li>
+							<li class="menu-item current-menu-item"><a  th:href="@{/about}">About</a></li>
+							<li class="menu-item"><a  th:href="@{/gallery}">Gallery</a></li>
+							<li class="menu-item"><a  th:href="@{/download}">Download</a></li>
+							<li class="menu-item"><a  th:href="@{/rekan}">Rekan</a></li>
+							<li class="menu-item"><a  th:href="@{/contact}">Contact</a></li>
 						</ul> <!-- .menu -->
 					</nav> <!-- .main-navigation -->
 					<div class="mobile-menu"></div>
@@ -52,12 +54,12 @@
 									<h2 class="entry-title">Our Developers</h2>
 									<div th:each="dev : ${dataDev}">
 									<figure class="featured-image">
-										<img th:src="'images/'+${dev.id}+'.jpg'" alt="post image" width="50px">
+										<img  th:src="'images/dev/'+${dev.id}+'.jpg'" alt="post image" >
 									</figure>
 									<h3 th:text="*{dev.nama}"> </h3>
 									<div class="social-links-developers"> 
 										<a th:href="'https://www.facebook.com/'+${dev.usernameFb}+'/'"><i class="fa fa-facebook-square"></i></a>
-										<a th:href="'https://www.instagram.com/'+${dev.usernameIg}"><i class="fa fa-instagram"></i></a>
+										<a th:href="'https://www.instagram.com/'+${dev.usernameIg}+'/'"><i class="fa fa-instagram"></i></a>
 									</div> <!-- .social- dev - links -->
 									<br>
 									<p class="leading">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat odio autem iste neque architecto alias culpa, ab libero, praesentium esse natus quae possimus sed qui dolorum laudantium illum, incidunt eligendi?</p>

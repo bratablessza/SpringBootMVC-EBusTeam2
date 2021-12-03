@@ -3,9 +3,9 @@ package com.project.ebus.controller;
 import java.util.List;
 
 import com.project.ebus.models.Developers;
-import com.project.ebus.models.Rekan;
+import com.project.ebus.models.Perusahaan;
 import com.project.ebus.repositories.developerRepository;
-import com.project.ebus.repositories.rekanRepository;
+import com.project.ebus.repositories.perusahaanRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -19,7 +19,7 @@ public class busController {
     developerRepository devRepo;
 
     @Autowired
-    rekanRepository rekanRepo;
+    perusahaanRepository perusahaanRepo;
 
     @GetMapping("/")
     public String cobaGetPagenya() {
@@ -33,11 +33,11 @@ public class busController {
         return "about";
     }
 
-    @GetMapping("/rekan") // ade
-    public String getPageRekan(Model model) {
-        List<Rekan> rekan = rekanRepo.findAll();
-        model.addAttribute("dataRekan", rekan);
-        return "rekan";
+    @GetMapping("/perusahaan") // ade
+    public String getPageperusahaan(Model model) {
+        List<Perusahaan> perusahaan = perusahaanRepo.findAll();
+        model.addAttribute("dataperusahaan", perusahaan);
+        return "perusahaan";
     }
 
     @GetMapping("/contact")

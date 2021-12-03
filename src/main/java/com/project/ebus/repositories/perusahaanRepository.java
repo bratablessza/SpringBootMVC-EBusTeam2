@@ -1,11 +1,11 @@
 package com.project.ebus.repositories;
 
-import com.project.ebus.models.Rekan;
+import com.project.ebus.models.Perusahaan;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface rekanRepository extends JpaRepository<Rekan, Long> {
+public interface perusahaanRepository extends JpaRepository<Perusahaan, Long> {
 
 }

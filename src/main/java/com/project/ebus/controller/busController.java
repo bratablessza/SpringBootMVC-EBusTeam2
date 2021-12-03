@@ -1,18 +1,30 @@
 package com.project.ebus.controller;
 
+import java.util.List;
+
+import com.project.ebus.models.Developers;
+import com.project.ebus.repositories.developerRepository;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class busController {
+
+    @Autowired
+    developerRepository devRepo;
 
     @GetMapping("/")
     public String cobaGetPagenya() {
         return "index";
     }
 
-    @GetMapping("/about")
-    public String cobaGetPagenya2() {
+    @GetMapping("/about") // brata
+    public String GetPageAbout(Model model) {
+        List<Developers> dev = devRepo.findAll();
+        model.addAttribute("dataDev", dev);
         return "about";
     }
 
@@ -37,6 +49,6 @@ public class busController {
     }
 
     // nanti yg ngerjain controller, kalo ada bentrok diatas replace aja. jangan
-    // lupa commit message ya
+    // lupa commit message
 
 }

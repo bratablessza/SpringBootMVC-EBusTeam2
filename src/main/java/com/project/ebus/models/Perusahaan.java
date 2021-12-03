@@ -16,8 +16,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "rekan")
-public class Rekan {
+@Table(name = "perusahaan")
+public class Perusahaan {
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
     Long id;

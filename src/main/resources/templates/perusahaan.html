@@ -6,7 +6,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
 
-	<title>Rekan kami</title>
+	<title>Perusahaan</title>
 	<!-- Loading third party fonts -->
 	<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900" rel="stylesheet"
 		type="text/css">
@@ -37,7 +37,8 @@
 						<li class="menu-item"><a href="http://localhost:8080/about">About</a></li>
 						<li class="menu-item"><a href="http://localhost:8080/gallery">Gallery</a></li>
 						<li class="menu-item"><a href="http://localhost:8080/download">Download</a></li>
-						<li class="menu-item current-menu-item"><a href="http://localhost:8080/rekan">Rekan</a></li>
+						<li class="menu-item current-menu-item"><a
+								href="http://localhost:8080/perusahaan">Perusahaan</a></li>
 						<li class="menu-item"><a href="http://localhost:8080/contact">Contact</a></li>
 					</ul> <!-- .menu -->
 				</nav> <!-- .main-navigation -->
@@ -46,50 +47,32 @@
 		</header> <!-- .site-header -->
 
 		<main class="main-content">
-			<div class="fullwidth-block inner-content">
+			<div class="fullwidth-block inner-content" >
 				<div class="container">
 					<div class="row">
-						<div class="col-md-7">
+						<div>
 							<div class="content">
-								<h2 class="entry-title">Rekan Kami</h2>
-								<div th:each="rekan : ${dataRekan}">
+								<h2 class="entry-title">Perusahaan yang bekerja sama dengan kami:</h2>
+								<div th:each="perusahaan : ${dataperusahaan}">
 									<div class="post">
 										<div class="entry-date">
-											<div class="date" th:text="${rekan.id}"></div>
+											<div class="date" th:text="${perusahaan.id}"></div>
 										</div>
 										<div class="featured-image">
-											<img th:src="'images/'+${rekan.id}+'.jpg'" alt="">
+											<img th:src="'images/bus/'+${perusahaan.id}+'.jpg'" alt="">
 										</div>
-										<h2 class="entry-title"><a href="#" th:text="${rekan.nama}"></a></h2>
-										<p th:text="${rekan.deskripsi}" />
+										<h2 id="bag1" class="entry-title"><a href="#" th:text="${perusahaan.nama}"></a>
+										</h2>
+										<p th:text="${perusahaan.deskripsi}" />
 									</div>
 								</div>
 
 							</div>
 						</div>
-						<div class="col-md-4 col-md-push-1">
-							<aside class="sidebar">
-								<div class="widget">
-									<h3 class="widget-title">Indeks</h3>
-									<ul class="discography-list">
-										<div th:each="rekan : ${dataRekan}">
-											<li>
-												<div class="detail">
-													<h3><a href="#" th:text="${rekan.nama}"></a></h3>
-												</div>
-											</li>
-										</div>
-
-									</ul>
-								</div>
-							</aside>
-						</div>
 					</div>
 				</div>
 			</div> <!-- .testimonial-section -->
-
-
-		</main> <!-- .main-content -->
+		</main> .main-content
 
 		<footer class="site-footer">
 			<div class="container">

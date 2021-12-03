@@ -3,7 +3,9 @@ package com.project.ebus.controller;
 import java.util.List;
 
 import com.project.ebus.models.Developers;
+import com.project.ebus.models.Rekan;
 import com.project.ebus.repositories.developerRepository;
+import com.project.ebus.repositories.rekanRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -16,20 +18,25 @@ public class busController {
     @Autowired
     developerRepository devRepo;
 
+    @Autowired
+    rekanRepository rekanRepo;
+
     @GetMapping("/")
     public String cobaGetPagenya() {
         return "index";
     }
 
     @GetMapping("/about") // brata
-    public String GetPageAbout(Model model) {
+    public String getPageAbout(Model model) {
         List<Developers> dev = devRepo.findAll();
         model.addAttribute("dataDev", dev);
         return "about";
     }
 
     @GetMapping("/rekan") // ade
-    public String cobaGetPagenya3() {
+    public String getPageRekan(Model model) {
+        List<Rekan> rekan = rekanRepo.findAll();
+        model.addAttribute("dataRekan", rekan);
         return "rekan";
     }
 

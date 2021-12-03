@@ -52,131 +52,17 @@
 						<div class="col-md-7">
 							<div class="content">
 								<h2 class="entry-title">Rekan Kami</h2>
-
-								<div class="post">
-									<div class="entry-date">
-										<div class="date">1</div>
+								<div th:each="rekan : ${dataRekan}">
+									<div class="post">
+										<div class="entry-date">
+											<div class="date" th:text="${rekan.id}"></div>
+										</div>
+										<div class="featured-image">
+											<img th:src="'images/'+${rekan.id}+'.jpg'" alt="">
+										</div>
+										<h2 class="entry-title"><a href="#" th:text="${rekan.nama}"></a></h2>
+										<p th:text="${rekan.deskripsi}" />
 									</div>
-									<div class="featured-image">
-										<img src="/images/sugeng-rahayu.jpg" alt="">
-									</div>
-									<h2 class="entry-title"><a href="#">Sugeng Rahayu</a></h2>
-									<p>Pada awal tahun 2000-an, Sugeng Rahayu, atau yang dulu dikenal sebagai Sumber
-										Kencono sangat diminati dan terus berkembang.
-										Bahkan tahun 2005, 2007 dan 2008, PO Sumber Kencono mendapatkan penghargaan dari
-										Menteri Perhubungan sebagai salah satu perusahaan yang memberikan pelayanan
-										terbaik selama penyelenggaraan angkutan lebaran. Pada tahun 2012, Sumber Kencono
-										berganti nama menjadi Sugeng Rahayu</p>
-								</div>
-
-								<div class="post">
-									<div class="entry-date">
-										<div class="date">2</div>
-									</div>
-									<div class="featured-image">
-										<img src="/images/sinar-jaya.jpg" alt="">
-									</div>
-									<h2 class="entry-title"><a href="#">Sinar Jaya</a></h2>
-									<p>Dengan pengalaman di bidang Transportasi sejak 1969, Bapak Herman Rusly (Alm.)
-										mendirikan PO Sinar Jaya bersama Bapak H. Rasidin Karyana. PO Sinar Jaya berdiri
-										pada tanggal 18 November 1982 dan beralamat di Jalan Diponegoro 75 - Tambun,
-										Bekasi, Indonesia, yang menjadi Kantor, Pool & Workshop.
-
-										Saat ini Sinar Jaya Group adalah salah satu perusahaan transportasi terbesar di
-										Indonesia dalam kategori bus antar kota antar provinsi jasa transportasi. Dengan
-										berjalannya waktu, Sinar Jaya terus berkembang untuk memenuhi kebutuhan
-										masyarakat yang semakin beraneka ragam dari Bus AKAP, AKDP, Bus Wisata, Bus
-										Antar Jemput Karyawan, Bus Kota.</p>
-								</div>
-
-								<div class="post">
-									<div class="entry-date">
-										<div class="date">3</div>
-									</div>
-									<div class="featured-image">
-										<img src="/images/shantika.jpg" alt="">
-									</div>
-									<h2 class="entry-title"><a href="#">New Shantika</a></h2>
-									<p>PO. Shantika yang merupakan bis Muria_an didirikan pada tanggal 13 maret 2005
-										oleh Bapak Taufiek dengan jalur pertama yakni Jepara -Jakarta PP. Tahun 2008
-										Shantika yang bermarkas di ngabul, Jepara ini mendapat suntikan dana investasi
-										besar - besaran dari Bangun Perkasa sangat memberikan dampak yang sangat besar
-										bagi perkembangan Shantika.</p>
-								</div>
-								<div class="post">
-									<div class="entry-date">
-										<div class="date">4</div>
-									</div>
-									<div class="featured-image">
-										<img src="/images/Primadona.jpg" alt="">
-									</div>
-									<h2 class="entry-title"><a href="#">Primadona</a></h2>
-									<p>PO Primadona adalah perusahaan bus yang bernaung dibawah PT Ariang Trans.
-										Perusahaan bus ini merupakan salah satu operator bus yang cukup banyak diminati
-										oleh masyarakat Sulawesi Selatan. Karena PO Primadona memiliki rute yang ramai
-										pengguna transportasinya, Perusahaan bus ini melayani trayek dari Makassar –
-										Toraja atau Makassar – Palopo. Selain itu PO Primadona memiliki armada yang
-										tergolong baru dan terus menambah armada dengan chasis premium baik Mercedes
-										Benz atau Scania. Perusahaan bus ini
-										juga unik dalam memberikan kelas berbeda dalam satu bus meski memiliki tujuan
-										yang sama. Perusahaan bus ini memiliki ciri khas berupa liveri bergambar
-										satwa-satwa langka, dikarenakan Bapak Opy Sanda selaku pemilik dari perusahaan
-										bus ini merupakan seorang yang fokus dan peduli terhadap satwa-satwa langka.
-										Oleh karena itu pada setiap armada busnya selalu menempelkan pesan untuk
-										melestarikan satwa-satwa tersebut.</p>
-								</div>
-								<div class="post">
-									<div class="entry-date">
-										<div class="date">5</div>
-									</div>
-									<div class="featured-image">
-										<img src="/images/zhafira.jpg" alt="">
-									</div>
-									<h2 class="entry-title"><a href="#">Zhafira Trans</a></h2>
-									<p>PO Zhafira Trans adalah salah satu perusahaan jasa persewaan bus pariwisata yang
-										beralamat di Jalan Raya Papagan 13 Kedungwuni. PO Zhafira Trans siap melayani
-										rombongan baik untuk destinasi trip lokal dan juga luar pulau dengan armada bus
-										terbaru serta pengemudi yang berpengalaman.
-
-										PO Zhafira Trans memulai bisnis persewaan bus sejak 2014. Selain menyediakan
-										armada baru, Zhafira juga selalu mengedepankan fasilitas kenyamanan lainnya
-										seperti bangku jok penumpang yang didesain lebih besar dan empuk untuk lebih
-										menyamankan perjalanan para penumpangnya. PO Zhafira Trans dengan total 7 unit
-										armadanya siap memberikan pengalaman yang berbeda dalam setiap perjalanan
-										menggunakan armada bus terbaru.</p>
-								</div>
-								<div class="post">
-									<div class="entry-date">
-										<div class="date">6</div>
-									</div>
-									<div class="featured-image">
-										<img src="/images/borlindo.jpg" alt="">
-									</div>
-									<h2 class="entry-title"><a href="#">Borlindo</a></h2>
-									<p>PO Borlindo yang bernaung dibawah PT Borlindo Mandiri Jaya, merupakan salah satu
-										perusahaan yang bergerak di bidang jasa transportasi umum. Armada Borlindo
-										didukung oleh Scania dan Mercedez Benz yang merupakan produsen bus terkemuka di
-										dunia. Walaupun merupakan perusahaan baru, Borlindo berkomitmen untuk memberi
-										pelayanan terbaik kepada setiap penumpang. Untuk mendukung hal tersebut maka
-										Borlindo mempunyai target untuk mengeluarkan 12 armada baru di tahun 2017,
-										sehingga memberi beragam pilihan kepada penumpang dari segi fasilitas dan harga.
-									</p>
-								</div>
-								<div class="post">
-									<div class="entry-date">
-										<div class="date">7</div>
-									</div>
-									<div class="featured-image">
-										<img src="/images/maju-lancar.jpg" alt="">
-									</div>
-									<h2 class="entry-title"><a href="#">Maju Lancar</a></h2>
-									<p>
-										Maju Lancar adalah sebuah perusahaan jasa transportasi angkutan penumpang darat
-										dan barang yang berasal dari Kabupaten Gunung Kidul, Yogyakarta. Kantor pusat
-										dan garasi bus ini berada di Jl. Wonosari-Yogyakarta Km 2.3, Siyono, Logandeng,
-										Playen, Gunung Kidul. Bus ini merupakan salah satu kebanggaan masyarakat Gunung
-										Kidul.
-									</p>
 								</div>
 
 							</div>
@@ -184,53 +70,16 @@
 						<div class="col-md-4 col-md-push-1">
 							<aside class="sidebar">
 								<div class="widget">
-									<h3 class="widget-title">Discography</h3>
+									<h3 class="widget-title">Indeks</h3>
 									<ul class="discography-list">
-										<li>
-											<figure class="cover"><img src="/images/thumbnail-1.jpg" alt="thumbnail 1">
-											</figure>
-											<div class="detail">
-												<h3><a href="#">Deserunt mollitia animi</a></h3>
-												<span class="year">2016</span>
-												<span class="track">17 tracks</span>
-											</div>
-										</li>
-										<li>
-											<figure class="cover"><img src="/images/thumbnail-2.jpg" alt="thumbnail 2">
-											</figure>
-											<div class="detail">
-												<h3><a href="#">Deserunt mollitia animi</a></h3>
-												<span class="year">2016</span>
-												<span class="track">17 tracks</span>
-											</div>
-										</li>
-										<li>
-											<figure class="cover"><img src="/images/thumbnail-3.jpg" alt="thumbnail 3">
-											</figure>
-											<div class="detail">
-												<h3><a href="#">Deserunt mollitia animi</a></h3>
-												<span class="year">2016</span>
-												<span class="track">17 tracks</span>
-											</div>
-										</li>
-										<li>
-											<figure class="cover"><img src="/images/thumbnail-4.jpg" alt="thumbnail 4">
-											</figure>
-											<div class="detail">
-												<h3><a href="#">Deserunt mollitia animi</a></h3>
-												<span class="year">2016</span>
-												<span class="track">17 tracks</span>
-											</div>
-										</li>
-										<li>
-											<figure class="cover"><img src="/images/thumbnail-5.jpg" alt="thumbnail 5">
-											</figure>
-											<div class="detail">
-												<h3><a href="#">Deserunt mollitia animi</a></h3>
-												<span class="year">2016</span>
-												<span class="track">17 tracks</span>
-											</div>
-										</li>
+										<div th:each="rekan : ${dataRekan}">
+											<li>
+												<div class="detail">
+													<h3><a href="#" th:text="${rekan.nama}"></a></h3>
+												</div>
+											</li>
+										</div>
+
 									</ul>
 								</div>
 							</aside>

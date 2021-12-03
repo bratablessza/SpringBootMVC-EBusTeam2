@@ -22,6 +22,11 @@ public class busController {
     rekanRepository rekanRepo;
 
     @GetMapping("/")
+    public String getPageLogin() {
+        return "login";
+    }
+
+    @GetMapping("/home")
     public String cobaGetPagenya() {
         return "index";
     }
@@ -45,9 +50,9 @@ public class busController {
         return "contact";
     }
 
-    @GetMapping("/download")
+    @GetMapping("/booking")
     public String cobaGetPagenya5() {
-        return "download";
+        return "booking";
     }
 
     @GetMapping("/gallery")
